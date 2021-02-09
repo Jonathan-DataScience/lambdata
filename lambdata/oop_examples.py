@@ -18,11 +18,34 @@ class Complex:
             return "({}, {}i)".format(self.r, self.i)
 
 
+class SocialMediaUser:
+        def __init__(self, name, location, upvotes=0):
+                self.name = str(name)
+                self.location = location
+                self.upvotes = int(upvotes)
+
+        def recieve_upvotes(self, num_upvotes=1):
+                self.upvotes += num_upvotes
+        
+        
+        def is_popular(self):
+            return self.upvotes > 100
 
 
+class Animal:
+        """General Representation of Animals"""
+        def __init__(self, name, weight, location="Earth", diet_type="Food", poisonous="False"):
+            self.name = name
+            self.weight = weight
+            self.location = location
+            self.diet_type = diet_type
+            self.poisonous = poisonous
+        
+        def eat(self, food):
+            return "Huge fan of that " + food
 
+        def run(self):
+            return "Vroom, Vroom, I go quick"
 
-num1 = Complex(3,-5)
-num2 = Complex(2,6)
-num1.add(num2)
-print(num1.r, num1.i)
+class Sloth(Animal):
+        pass
