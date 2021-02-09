@@ -7,7 +7,6 @@ class BareMinimumClass:
 
 class Complex:
         def __init__(self, realpart, imagpart):
-           """Constructor for Complex Numbers"""
             self.r = realpart
             self.i = imagpart
 
